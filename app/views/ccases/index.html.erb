@@ -6,9 +6,11 @@
     <thead>
       <tr>
         <td>#</td>
+        <td>Case ID</td>
         <td>Title</td>
         <td>Description</td>
         <td>Device</td>
+        <td>Company</td>
         <td>Created Time</td>
 
       </tr>
@@ -17,10 +19,12 @@
       <% @ccases.each do |ccase| %>
         <tr>
           <td>#</td>
+          <td><%= ccase.id%></td>
           <td><%= link_to(ccase.title, ccase_path(ccase)) %></td>
           <td><%= ccase.description %></td>
-          <td><% ccase.device %></td>
-          <td><% ccase.created_at%></td>
+          <td><%= ccase.device %></td>
+          <td><%= ccase.custsite %></td>
+          <td><%= ccase.created_at%></td>
           <td>
               <%= link_to("Edit", edit_ccase_path(ccase), class: "btn btn-sm btn-default")%>
               <%= link_to("Delete", ccase_path(ccase),    class: "btn btn-sm btn-default",
