@@ -30,7 +30,7 @@ class CcasesController < ApplicationController
 
   def update
     @ccase = Ccase.find(params[:id])
-    if @ccase.update(ccase_path)
+    if @ccase.update(ccase_params)
       redirect_to ccases_path
       flash[:notice] = "Updated"
     else

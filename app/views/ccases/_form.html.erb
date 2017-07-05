@@ -1,0 +1,17 @@
+<%= simple_form_for @ccase do |f| %>
+  <div class="form-ccase">
+    <%= f.input :title, input_html: { class: "form-control"} %>
+    <%= f.input :description, input_html: { class: "form-control"} %>
+    <%= f.input :device, input_html: { class: "form-control"} %>
+    <%= f.input :custname, input_html: { class: "form-control"} %>
+    <%= f.input :custsite, input_html: { class: "form-control"} %>
+    <%= f.input :custphone, input_html: { class: "form-control"} %>
+    <%= f.input :custmail, input_html: { class: "form-control"} %>
+    <%= f.input :note, input_html: { class: "form-control"} %>
+
+
+
+
+  </div>
+  <%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submiting..." } %>
+<% end %>

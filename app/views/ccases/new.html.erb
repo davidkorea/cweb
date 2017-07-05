@@ -2,52 +2,6 @@
     <h2>Create Case</h2>
 
     <hr>
-    <%= form_for @ccase do |f| %>
-
-    <% if @ccase.errors.any? %>
-    <ul>
-      <% @ccase.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-    <% end %>
-
-
-    Title
-    <%= f.text_field :title %>
-    <br>
-    Description
-    <br>
-    <%= f.text_area :description %>
-    <br>
-    Device
-    <%= f.text_area :device %>
-    <br>
-    Customer Name
-    <%= f.text_area :custname %>
-    <br>
-    Company
-    <%= f.text_area :custsite %>
-    <br>
-    Phone
-    <%= f.text_area :custphone %>
-    <br>
-    E-mail
-    <%= f.text_area :custmail %>
-    <br>
-    note
-    <%= f.text_area :note %>
-    <br>
-
-
-
-
-
-
-
-
-
-    <%= f.submit "Submit", :disable_with => 'Submiting...' %>
-    <% end %>
+    <%= render "form" %>
 
 </div>
