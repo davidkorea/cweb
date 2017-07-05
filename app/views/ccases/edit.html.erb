@@ -1,8 +1,17 @@
 <div class="col-md-4 col-md-offset-4">
-    <h2>Create Case</h2>
+    <h2>Edit Case</h2>
 
     <hr>
     <%= form_for @ccase do |f| %>
+
+    <% if @ccase.errors.any? %>
+    <ul>
+      <% @ccase.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+    <% end %>
+
 
     Title
     <%= f.text_field :title %>
