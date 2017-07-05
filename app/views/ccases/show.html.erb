@@ -1,0 +1,13 @@
+<div class="col-md-12">
+  <div class="ccase">
+    <%= link_to("Edit", edit_ccase_path(@ccase), class: "btn btn-primary pull-right")%>
+  </div>
+  <h2><%= @ccase.title %></h2>
+  <p><%= @ccase.description %></p>
+  <p><%= @ccase.device%></p>
+  <p><%= @ccase.custname %></p>
+  <p><%= @ccase.custsite %></p>
+  <p><%= @ccase.custphone %></p>
+  <p><%= @ccase.custmail %></p>
+  <p><%= @ccase.note %></p>
+</div>
