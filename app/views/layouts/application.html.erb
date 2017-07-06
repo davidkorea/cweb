@@ -9,13 +9,34 @@
   </head>
 
   <body>
-      <div class="container-fluid">
-           <%= render "common/navbar" %>
-           <%= render "common/flashes" %>
 
-           <%= yield %>
-       </div>
 
-       <%= render "common/footer" %>
+  <div class="container">
+    <%= render "common/navbar" %>
+    <%= render "common/flashes" %>
+    <div class="row">
+      <div class="col-md-2">
+        <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+          <li> <%= link_to("APO TSC KOR Office", ccases_path) %> </li>
+        </ul>
+      </div>
+      <div class="col-md-10">
+
+        <%= yield %>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+      <%= render "common/footer" %>
+    </div>
+  </div>
+
+
+
+
+
   </body>
 </html>
