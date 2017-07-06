@@ -10,7 +10,7 @@ class CcasesController < ApplicationController
 
   def show
     @ccase = Ccase.find(params[:id])
-    @posts = @ccase.posts
+    @posts = @ccase.posts.recent
   end
 
   def new

@@ -5,7 +5,7 @@ class Post < ApplicationRecord
   belongs_to :user
   belongs_to :ccase
 
-
+  scope :recent, -> { order("created_at DESC")}
 
 
 
