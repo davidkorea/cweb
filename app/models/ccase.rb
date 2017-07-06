@@ -7,7 +7,7 @@ class Ccase < ApplicationRecord
 
   has_many :posts
 
-
+  scope :recent, -> { order("created_at DESC")}
 
 
 

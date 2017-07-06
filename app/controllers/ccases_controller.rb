@@ -5,7 +5,7 @@ class CcasesController < ApplicationController
 
 
   def index
-    @ccases = Ccase.all
+    @ccases = Ccase.all.recent.paginate(:page => params[:page], :per_page => 15)
   end
 
   def show
