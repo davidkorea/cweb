@@ -1,5 +1,8 @@
 class CcasesController < ApplicationController
 
+  before_action :authenticate_user! , only: [:new, :create]
+
+
 
   def index
     @ccases = Ccase.all
@@ -16,6 +19,8 @@ class CcasesController < ApplicationController
 
   def create
     @ccase = Ccase.new(ccase_params)
+    @ccase.user = current_user
+    
     if @ccase.save
       redirect_to ccases_path
     else
