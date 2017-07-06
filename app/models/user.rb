@@ -6,5 +6,9 @@ class User < ApplicationRecord
 
 
     has_many :ccases
-         
+    has_many :posts
+
+
+
+
 end
