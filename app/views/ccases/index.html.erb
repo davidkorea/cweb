@@ -26,9 +26,11 @@
           <td><%= ccase.custsite %></td>
           <td><%= ccase.created_at%></td>
           <td>
+             <!-- <% if current_user && current_user == ccase.user %>
               <%= link_to("Edit", edit_ccase_path(ccase), class: "btn btn-sm btn-default")%>
               <%= link_to("Delete", ccase_path(ccase),    class: "btn btn-sm btn-default",
                           method: :delete, data: { confirm: "Are you sure?" } )%>
+            <% end %> -->
           </td>
         </tr>
       <% end %>
