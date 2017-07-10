@@ -38,7 +38,7 @@ gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'devise'
 gem 'will_paginate'
-
+gem 'font-awesome-rails'
 
 
 group :development, :test do
