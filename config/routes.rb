@@ -8,8 +8,20 @@ Rails.application.routes.draw do
   root 'ccases#index'
 
   namespace :admin do
-
     resources :ccases
   end
+
+  namespace :account do
+    resources :users
+  end
+
+
+
+
+
+
+
+
+
 
 end
