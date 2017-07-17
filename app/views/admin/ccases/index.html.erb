@@ -1,0 +1,22 @@
+<div class="pull-right">
+  <%= link_to("Create a Case", new_admin_ccase_path, :class => "btn btn-default" ) %>
+</div>
+
+<br><br>
+
+<table class="table table-boldered">
+  <% @ccases.each do |ccase| %>
+  <tr>
+    <td>
+      <%= link_to(ccase.title, admin_ccase_path(ccase)) %>
+    </td>
+    <td>
+      <%= link_to("Edit", edit_admin_ccase_path(ccase)) %>
+      <%= link_to("Destroy", admin_ccase_path(ccase), :method => :delete, :data => { :confirm => "Are you sure?" }) %>
+    </td>
+    <td>
+      <%= ccase.created_at %>
+    </td>
+  </tr>
+  <% end %>
+</table>

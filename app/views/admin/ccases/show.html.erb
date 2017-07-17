@@ -1,0 +1,7 @@
+<h1><%= @ccase.title %></h1>
+
+<p>
+  <%= link_to "打开前台", ccase_path(@ccase), :target => "_blank", :class => "btn btn-primary" %>
+</p>
+
+<%= simple_format @ccase.description %>

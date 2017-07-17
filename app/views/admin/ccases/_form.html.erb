@@ -1,0 +1,22 @@
+<% if @ccase.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@ccase.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+    <ul>
+    <% @ccase.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="form-group">
+  <%= f.label :name %>
+  <%= f.text_field :title, :class => "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :description %>
+  <%= f.text_area :description, :class => "form-control" %>
+
+</div>
